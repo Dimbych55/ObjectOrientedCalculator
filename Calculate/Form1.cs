@@ -12,66 +12,35 @@ namespace Calculate
 {
     public partial class Form1 : Form
     {
+        Operationscalculate C;
         public Form1()
         {
             InitializeComponent();
+            C = new Operationscalculate();
         }
-        public static double sum(double a, double b)
-        {
-            return a + b;
-        }
-        public static double razn(double a, double b)
-        {
-            return a - b;
-        }
-
-        public static double umnog(double a, double b)
-        {
-            return a * b;
-        }
-
-        public static double del(double a, double b)
-        {
-            return a / b;
-        }
-
-        public static double step(double a, double b)
-        {
-            return Math.Pow(a, b);
-        }
-        public static double square(double a)
-        {
-            return Math.Pow(a,2);
-        }
-
         private void buttonsquare_Click(object sender, EventArgs e)
         {
-            textBox3.Text = Convert.ToString(square(Convert.ToDouble(textBox1.Text)));
+            textBox3.Text = Convert.ToString(C.square(Convert.ToDouble(textBox1.Text)));
         }
-
         private void buttonplus_Click(object sender, EventArgs e)
         {
-            textBox3.Text = Convert.ToString(sum(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
+            textBox3.Text = Convert.ToString(C.Sum(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
         }
-
         private void buttonminus_Click(object sender, EventArgs e)
         {
-            textBox3.Text = Convert.ToString(razn(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
+            textBox3.Text = Convert.ToString(C.razn(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
         }
-
         private void buttonumn_Click(object sender, EventArgs e)
         {
-            textBox3.Text = Convert.ToString(umnog(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
+            textBox3.Text = Convert.ToString(C.umnog(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
         }
-
         private void buttondel_Click(object sender, EventArgs e)
         {
-            textBox3.Text = Convert.ToString(del(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
+            textBox3.Text = Convert.ToString(C.del(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
         }
-
         private void buttonpow_Click(object sender, EventArgs e)
         {
-            textBox3.Text = Convert.ToString(step(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
+            textBox3.Text = Convert.ToString(C.step(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
         }
     }
 }
