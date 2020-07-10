@@ -81,5 +81,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnitProjectlibrary\UnitProjectlibrary.csproj">
+      <Project>{64ab9704-b8ae-49b9-a341-f549fd77174b}</Project>
+      <Name>UnitProjectlibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitTestProject1\UnitTestProject1.csproj">
+      <Project>{b6ec0175-c21b-4d9f-baa2-6f23f7249f1a}</Project>
+      <Name>UnitTestProject1</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
