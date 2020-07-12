@@ -18,6 +18,7 @@ namespace Calculate
             InitializeComponent();
             C = new Operationscalculate();
         }
+        double  b;
         private void buttonsquare_Click(object sender, EventArgs e)
         {
             textBox3.Text = Convert.ToString(C.square(Convert.ToDouble(textBox1.Text)));
@@ -36,11 +37,19 @@ namespace Calculate
         }
         private void buttondel_Click(object sender, EventArgs e)
         {
+            b = Convert.ToDouble(textBox2.Text);
+            if ( b == 0)
+            {
+                MessageBox.Show("Деление на ноль невозможно");
+                textBox2.Clear();
+            } else
+
             textBox3.Text = Convert.ToString(C.del(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
         }
         private void buttonpow_Click(object sender, EventArgs e)
         {
             textBox3.Text = Convert.ToString(C.step(Convert.ToDouble(textBox1.Text), Convert.ToDouble(textBox2.Text)));
         }
+
     }
 }

@@ -8,6 +8,7 @@ namespace Calculate
 {
     public class Operationscalculate : Calculate
     {
+       
         public  double Sum(double a, double b)
         {
             return a + b;

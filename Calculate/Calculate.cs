@@ -15,4 +15,6 @@ namespace Calculate
         double step(double a, double b);
         double square(double a);
     }
+    
 }
+

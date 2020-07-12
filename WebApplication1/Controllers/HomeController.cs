@@ -34,13 +34,14 @@ namespace WebApplication1.Controllers
             double result;
            
             
+             
             result = C.Sum(a, b);
             result = C.razn(a, b);
             result = C.del(a, b);
             result = C.umnog(a, b);
             result = C.step(a, b);
             result = C.square(a);
-            
+           
             ViewBag.Result = result;
 
             ViewBag.Operation = new SelectListItem[]
@@ -53,24 +54,9 @@ namespace WebApplication1.Controllers
         new SelectListItem() { Value = "square", Text ="квадрат" }
             };
             return View();
+            
         }
 
-
-
-
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
+  
     }
 }
